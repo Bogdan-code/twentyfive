@@ -5,10 +5,13 @@
 }
 
 
-h3,h2,h1{
+h2,h1{
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+h3{
+  font-family:Arial, Helvetica, sans-serif;
+}
 .index-main header{
   grid-area: hd;
   display: flex;
@@ -24,7 +27,11 @@ h3,h2,h1{
 nav{
   display: flex;
   flex-direction: column;
+  
+
 }
+
+
 a{  
   text-decoration: none;
   color: black;
@@ -33,37 +40,44 @@ a{
   display: flex;
   justify-content: center;
   align-content: center;
-  padding-top: 5vh;
 }
 
 nav a:hover{
-  background-color:#2c2d6e;
+  background-color:#1f204d;
 }
 
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 450px) {
 
 
   /* Index */
-  .material-icons{
+  #menu_button{
     display: inline;
     position: absolute;
     font-size: 10vw;
     margin-top: 0;
     z-index: 10;
   }
+  
 
   nav{
     position:fixed;
     height: 50vh;
     width: 30vh;
-    left: -50vw;
+    left: -500vw;
     z-index: 5;
     top:10vh;
     transition: left 0.3s;
     background-color: #434593;
 
   }
+  nav a{
+    padding-top: 4rem;
+    border: solid 2px;
+  }
+
+
+
   .show{
     left: 0;
   }
@@ -75,7 +89,7 @@ nav a:hover{
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     display: none;
-    z-index: 0;
+    z-index: 1;
   }
   .fade-layer.visible{
     display: block;
@@ -90,27 +104,59 @@ nav a:hover{
     "sc2 sc2 img2"
     "img3 sc3 sc3"
     "ft ft ft";
-    grid-template-columns: 1fr 50% 1fr;
-    grid-template-rows: 20% 1fr 1fr 1fr 10%;
+    contain: content;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10% 1fr 1fr 20% 5%;
+  }
+
+  .index-main section h3{
+    font-size: 60%;
+    line-height: 1.5;
+    margin-top: 0;
+  }
+
+  img{
+    z-index: -10;
   }
 
   .img1{
     grid-area: img1;
     contain: content;
-    width: 100%;
+
   }
   
   .img2{
     grid-area: img2;
     contain: content;
-    width: 100%;
+
+
   }
   
   .img3{
     grid-area: img3 ;
     contain: content;
-    width: 100%;
+
   }
+
+  .section1{
+    grid-area: sc1;
+    contain: content;
+
+  }
+  
+  .section2{
+    grid-area: sc2;
+    contain: content;
+
+
+  }
+  
+  .section3{
+    grid-area: sc3 ;
+    contain: content;
+
+  }
+
 
   /* Foto-album */
 
