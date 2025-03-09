@@ -109,6 +109,10 @@ nav a:hover{
     grid-template-rows: 10% 1fr 1fr 20% 5%;
   }
 
+  .index-main header{
+    
+  }
+
   .index-main section h3{
     font-size: 60%;
     line-height: 1.5;
@@ -159,5 +163,134 @@ nav a:hover{
 
 
   /* Foto-album */
+
+}
+
+
+@media screen and (max-width: 450px) {
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    background-color: #fafafa;
+  }
+
+  /* Index */
+  #menu_button{
+    display: inline;
+    position: absolute;
+    font-size: 10vw;
+    margin-top: 0;
+    z-index: 10;
+    background-color: #7a7a7a;
+    border-radius: 15%;
+  }
+  
+
+  nav{
+    position:fixed;
+    height: 50vh;
+    width: 30vh;
+    left: -500vw;
+    z-index: 5;
+    top:10vh;
+    transition: left 0.3s;
+    background-color: #434593;
+
+  }
+  nav a{
+    padding-top: 4rem;
+    border: solid 2px;
+  }
+
+
+
+  .show{
+    left: 0;
+  }
+  .fade-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1;
+  }
+  .fade-layer.visible{
+    display: block;
+  }
+
+  .index-main{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "hd hd hd"
+    "img1 sc1 sc1"
+    "sc2 sc2 img2"
+    "img3 sc3 sc3"
+    "ft ft ft";
+    contain: content;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10% 20% 20% 20% 1fr;
+  }
+
+  .index-main section h3{
+    font-size: 60%;
+    line-height: 1.5;
+    margin-top: 0;
+  }
+
+  img{
+    z-index: -10;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+
+  .img1{
+    grid-area: img1;
+    contain: content;
+
+  }
+  
+  .img2{
+    grid-area: img2;
+    contain: content;
+
+
+  }
+  
+  .img3{
+    grid-area: img3 ;
+    contain: content;
+
+  }
+  .index-main section{
+
+  }
+
+  .section1{
+    grid-area: sc1;
+    contain: content;
+    margin-left: 10px;
+
+  }
+  
+  .section2{
+    grid-area: sc2;
+    contain: content;
+    margin-right: 10px;
+
+
+  }
+  
+  .section3{
+    grid-area: sc3 ;
+    contain: content;
+    margin-left: 10px;
+  }
 
 }
